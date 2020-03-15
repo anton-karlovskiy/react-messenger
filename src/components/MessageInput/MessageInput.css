@@ -1,4 +1,5 @@
-.compose {
+
+.message-input {
   padding: 10px;
   display: flex;
   align-items: center;
@@ -10,14 +11,14 @@
 }
 
 @supports (backdrop-filter: blur(20px)) {
-  .compose {
+  .message-input {
     border: none;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
   }
 }
 
-.compose-input {
+.text-input {
   flex: 1;
   border: none;
   font-size: 14px;
@@ -25,15 +26,15 @@
   background: none;
 }
 
-.compose-input::placeholder {
+.text-input::placeholder {
   opacity: 0.3;
 }
 
-.compose .toolbar-button {
+.message-input .toolbar-button {
   color: #bbbbbf;
   margin-left: 15px;
 }
 
-.compose .toolbar-button:hover {
+.message-input .toolbar-button:hover {
   color: #99999c;
 }
