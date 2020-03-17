@@ -1,8 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-// ray test touch <
-// import moment from 'moment';
-// ray test touch >
 
 import Message from '../Message';
 import './MessageList.css';
@@ -94,9 +91,6 @@ const MessageList = () => {
       const current = messages[index];
       const next = messages[index + 1];
       const isMine = current.author === MY_USER_ID;
-      // ray test touch <
-      // let currentMoment = moment(current.timestamp);
-      // ray test touch >
       let prevBySameAuthor = false;
       let nextBySameAuthor = false;
       let startsSequence = true;
@@ -104,32 +98,20 @@ const MessageList = () => {
       let showTimestamp = true;
 
       if (previous) {
-        // ray test touch <
-        // const previousMoment = moment(previous.timestamp);
-        // const previousDuration = moment.duration(currentMoment.diff(previousMoment));
         const isPrevWithinAnHour = true;
-        // ray test touch >
         prevBySameAuthor = previous.author === current.author;
         
-        // ray test touch <
         if (prevBySameAuthor && isPrevWithinAnHour) {
           startsSequence = false;
         }
-        // ray test touch >
 
-        // ray test touch <
         if (isPrevWithinAnHour) {
           showTimestamp = false;
         }
-        // ray test touch >
       }
 
       if (next) {
-        // ray test touch <
-        // const nextMoment = moment(next.timestamp);
-        // const nextDuration = moment.duration(nextMoment.diff(currentMoment));
         const isNextWithinAnHour = true;
-        // ray test touch >
         nextBySameAuthor = next.author === current.author;
 
         if (nextBySameAuthor && isNextWithinAnHour) {
