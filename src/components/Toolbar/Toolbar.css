@@ -32,16 +32,3 @@
 .right-items {
   flex-direction: row-reverse;
 }
-
-.left-items .toolbar-button {
-  margin-right: 20px;
-}
-
-.right-items .toolbar-button {
-  margin-left: 20px;
-}
-
-.left-items .toolbar-button:last-child,
-.right-items .toolbar-button:last-child {
-  margin: 0;
-}

@@ -33,13 +33,5 @@
 
 .toolbar-button-set {
   width: fit-content;
-}
-
-.message-input .toolbar-button {
-  color: #bbbbbf;
-  margin-left: 15px;
-}
-
-.message-input .toolbar-button:hover {
-  color: #99999c;
+  margin-left: 14px;
 }

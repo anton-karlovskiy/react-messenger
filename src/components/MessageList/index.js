@@ -82,11 +82,7 @@ const MessageList = () => {
   },[]);
 
   const renderMessages = () => {
-    let index = 0;
-    const messageCount = messages.length;
-    let tempMessages = [];
-
-    while (index < messageCount) {
+    const renderedMessages = messages.map((message, index) => {
       const previous = messages[index - 1];
       const current = messages[index];
       const next = messages[index + 1];
@@ -119,8 +115,7 @@ const MessageList = () => {
         }
       }
 
-      // ray test touch <
-      tempMessages.push(
+      return (
         <Message
           key={index}
           isMine={isMine}
@@ -129,13 +124,9 @@ const MessageList = () => {
           showTimestamp={showTimestamp}
           data={current} />
       );
-      // ray test touch >
-
-      // proceed to the next message
-      index += 1;
-    }
-
-    return tempMessages;
+    });
+    
+    return renderedMessages;
   };
 
   return (
