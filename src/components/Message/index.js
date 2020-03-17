@@ -1,6 +1,5 @@
 
 import React from 'react';
-import moment from 'moment';
 import './Message.css';
 
 const Message = ({
@@ -10,7 +9,7 @@ const Message = ({
   endsSequence,
   showTimestamp
 }) => {
-  const friendlyTimestamp = moment(data.timestamp).format('LLLL');
+  const friendlyTimestamp = new Date(data.timestamp).toString();
 
   return (
     <div className={[
