@@ -119,6 +119,7 @@ const MessageList = () => {
         }
       }
 
+      // ray test touch <
       tempMessages.push(
         <Message
           key={index}
@@ -128,6 +129,7 @@ const MessageList = () => {
           showTimestamp={showTimestamp}
           data={current} />
       );
+      // ray test touch >
 
       // proceed to the next message
       index += 1;

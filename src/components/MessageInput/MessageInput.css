@@ -1,9 +1,9 @@
 
 .message-input {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   padding: 8px;
-  width: calc(100% - 16px);
+  width: calc(100% - 384px);
   display: flex;
   align-items: center;
   background: white;

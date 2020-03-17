@@ -27,7 +27,7 @@ The MessageInput component allows the user to send messages and attachments.
 
 | props | type | description |
 |-------|------|-------------|
-| `rightItems` | `ToolbarButton[]` | Icons that appear to the right of the `input` element allowing users to send more than text (e.g. photos, cash, location, etc). |
+| `rightItems` | `SvgIcon[]` | Icons that appear to the right of the `input` element allowing users to send more than text (e.g. photos, cash, location, etc). |
 
 ### ConversationList
 
@@ -74,11 +74,11 @@ The demo uses two toolbars which sit above the sidebar and content panes. This c
 | props | type | description |
 |-------|------|-------------|
 | `title` | `String` | The title to be displayed in the center of the toolbar. |
-| `leftItems` | `ToolbarButton[]` | The `ToolbarButton` elements that should appear on the left side of the toolbar. |
-| `rightItems` | `ToolbarButton[]` | The `ToolbarButton` elements that should appear on the right side of the toolbar. |
+| `leftItems` | `SvgIcon[]` | The `SvgIcon` elements that should appear on the left side of the toolbar. |
+| `rightItems` | `SvgIcon[]` | The `SvgIcon` elements that should appear on the right side of the toolbar. |
 
 
-### ToolbarButton
+### SvgIcon
 
 Probably better described as an "icon button," it is just that -- a button that shows an icon. I will add accessibility considerations in time.
 
