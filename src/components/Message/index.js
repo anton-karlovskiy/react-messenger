@@ -14,10 +14,10 @@ const Message = ({
   return (
     <div className={[
       'message',
-      `${isMine ? 'mine' : ''}`,
-      `${startsSequence ? 'start' : ''}`,
-      `${endsSequence ? 'end' : ''}`
-    ].join(' ')}>
+      isMine ? 'mine' : '',
+      startsSequence ? 'start' : '',
+      endsSequence ? 'end' : ''
+    ].filter(each => each !== '').join(' ')}>
       {showTimestamp && (
         <div className='timestamp'>
           {friendlyTimestamp}

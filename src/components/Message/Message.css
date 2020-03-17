@@ -23,13 +23,11 @@
 }
 
 .message.start .bubble-container .bubble {
-  /* margin-top: 10px; */
   border-top-left-radius: 20px;
 }
 
 .message.end .bubble-container .bubble {
   border-bottom-left-radius: 20px;
-  /* margin-bottom: 10px; */
 }
 
 .message.mine.start .bubble-container .bubble {
@@ -44,8 +42,8 @@
 
 .message .bubble-container .bubble {
   margin: 1px 0px;
-  background: #f4f4f8;
-  padding: 10px 15px;
+  background: #f2f6f9;
+  padding: 10px 14px;
   border-radius: 20px;
   max-width: 75%;
   border-top-left-radius: 2px;
@@ -55,8 +53,7 @@
 }
 
 .message.mine .bubble-container .bubble {
-  background: #007aff;
-  color: white;
+  background: #dbf4fd;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 2px;

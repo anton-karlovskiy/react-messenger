@@ -1,9 +1,12 @@
+
+// ray test touch <
 import React from 'react';
+
 import './ToolbarButton.css';
 
-export default function ToolbarButton(props) {
-    const { icon } = props;
-    return (
-      <i className={`toolbar-button ${icon}`} />
-    );
-}
+const ToolbarButton = ({ icon }) => (
+  <i className={`toolbar-button ${icon}`} />
+);
+
+export default ToolbarButton;
+// ray test touch >

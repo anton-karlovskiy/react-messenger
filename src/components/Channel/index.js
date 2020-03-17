@@ -1,4 +1,5 @@
 
+// ray test touch <
 import React from 'react';
 
 import ToolbarButton from '../ToolbarButton';
@@ -9,7 +10,7 @@ import MessageInput from '../MessageInput';
 const Channel = () => (
   <div className='message-panel'>
     <Toolbar
-      title='Conversation Title'
+      title='React Loading Patterns'
       rightItems={[
         <ToolbarButton key='info' icon='ion-ios-information-circle-outline' />,
         <ToolbarButton key='video' icon='ion-ios-videocam' />,
@@ -28,3 +29,4 @@ const Channel = () => (
 );
 
 export default Channel;
+// ray test touch >

@@ -54,7 +54,7 @@ Because most of the work is done by `MessageList`, this component is pretty stra
 | props | type | description |
 |-------|------|-------------|
 | `data` | `Object` | An object containing information about the message. We use `data.message` for the message body and `data.timestamp` for the JavaScript Date object representing the time at which the message was sent. |
-| `isMine` | `Boolean` | Applies a tint to the message (`#007aff` in demo) and aligns it to the right, indicating that the message was sent by you. |
+| `isMine` | `Boolean` | Applies a tint to the message (`#00cfba` in demo) and aligns it to the right, indicating that the message was sent by you. |
 | `startsSequence` | `Boolean` | Indicates that the message represents the start of a sequence of messages. This sets the appropriate top border radius, depending on whether the message was sent by you or someone else. |
 | `endsSequence` | `Boolean` | Indicates that the message represents the end of a sequence of messages. This sets the appropriate bottom border radius, depending on whether the message was sent by you or someone else. |
 | `showTimestamp` | `Boolean` | Determines whether or not the timestamp of the message should be shown. The demo app sets this value to `true` if more than one hour has passed between messages. |
