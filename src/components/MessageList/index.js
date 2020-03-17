@@ -1,7 +1,8 @@
 
-// ray test touch <
 import React, { useEffect, useState } from 'react';
-import moment from 'moment';
+// ray test touch <
+// import moment from 'moment';
+// ray test touch >
 
 import Message from '../Message';
 import './MessageList.css';
@@ -84,16 +85,18 @@ const MessageList = () => {
   },[]);
 
   const renderMessages = () => {
-    let i = 0;
+    let index = 0;
     const messageCount = messages.length;
     let tempMessages = [];
 
-    while (i < messageCount) {
-      const previous = messages[i - 1];
-      const current = messages[i];
-      const next = messages[i + 1];
+    while (index < messageCount) {
+      const previous = messages[index - 1];
+      const current = messages[index];
+      const next = messages[index + 1];
       const isMine = current.author === MY_USER_ID;
-      let currentMoment = moment(current.timestamp);
+      // ray test touch <
+      // let currentMoment = moment(current.timestamp);
+      // ray test touch >
       let prevBySameAuthor = false;
       let nextBySameAuthor = false;
       let startsSequence = true;
@@ -101,32 +104,42 @@ const MessageList = () => {
       let showTimestamp = true;
 
       if (previous) {
-        const previousMoment = moment(previous.timestamp);
-        const previousDuration = moment.duration(currentMoment.diff(previousMoment));
+        // ray test touch <
+        // const previousMoment = moment(previous.timestamp);
+        // const previousDuration = moment.duration(currentMoment.diff(previousMoment));
+        const isPrevWithinAnHour = true;
+        // ray test touch >
         prevBySameAuthor = previous.author === current.author;
         
-        if (prevBySameAuthor && previousDuration.as('hours') < 1) {
+        // ray test touch <
+        if (prevBySameAuthor && isPrevWithinAnHour) {
           startsSequence = false;
         }
+        // ray test touch >
 
-        if (previousDuration.as('hours') < 1) {
+        // ray test touch <
+        if (isPrevWithinAnHour) {
           showTimestamp = false;
         }
+        // ray test touch >
       }
 
       if (next) {
-        const nextMoment = moment(next.timestamp);
-        const nextDuration = moment.duration(nextMoment.diff(currentMoment));
+        // ray test touch <
+        // const nextMoment = moment(next.timestamp);
+        // const nextDuration = moment.duration(nextMoment.diff(currentMoment));
+        const isNextWithinAnHour = true;
+        // ray test touch >
         nextBySameAuthor = next.author === current.author;
 
-        if (nextBySameAuthor && nextDuration.as('hours') < 1) {
+        if (nextBySameAuthor && isNextWithinAnHour) {
           endsSequence = false;
         }
       }
 
       tempMessages.push(
         <Message
-          key={i}
+          key={index}
           isMine={isMine}
           startsSequence={startsSequence}
           endsSequence={endsSequence}
@@ -135,7 +148,7 @@ const MessageList = () => {
       );
 
       // proceed to the next message
-      i += 1;
+      index += 1;
     }
 
     return tempMessages;
@@ -147,4 +160,3 @@ const MessageList = () => {
 };
 
 export default MessageList;
-// ray test touch >
